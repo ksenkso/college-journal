@@ -1,0 +1,12 @@
+@mixin u_transition {
+	transition: all .2s ease-in-out;
+}
+
+@mixin shadow($shadow: $shadow) {
+	box-shadow: $shadow
+}
+
+@mixin size($s) {
+  width: $s;
+  height: $s;
+}

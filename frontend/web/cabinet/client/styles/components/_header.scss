@@ -1,0 +1,13 @@
+.header {
+	display: flex;
+	align-items: center;
+  height: 64px;
+
+  &__title {
+    margin: 0 0 0 1rem;
+  }
+	.sidebar__show {
+		font-size: 3rem;
+		cursor: pointer;
+	}
+}

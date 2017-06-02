@@ -1,0 +1,41 @@
+<form class="form form_students" [formGroup]="studentForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-group">
+    <label class="center-block">Фамилия:
+      <input class="form-control" formControlName="last_name" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Имя:
+      <input class="form-control" formControlName="first_name" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Отчество:
+      <input class="form-control" formControlName="patronymic" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Адрес:
+      <input class="form-control" formControlName="address" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Телефон:
+      <input type="tel" class="form-control" formControlName="phone" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Группа:
+      <select class="form-control" formControlName="group_id" required>
+        <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+      </select>
+    </label>
+  </div>
+  <div style="margin-bottom: 1em">
+    <button type="submit"
+            [disabled]="!studentForm.valid" class="btn btn-success">Save</button> &nbsp;
+    <button type="reset" (click)="revert()"
+            [disabled]="studentForm.pristine" class="btn btn-danger">Revert</button>
+  </div>
+</form>

@@ -1,0 +1,38 @@
+.wrap > .container-fluid
+	display: flex
+
+.sidebar
+	min-width: 250px
+
+	@media only screen and (max-width: 768px)
+		h1
+			display: none
+
+		width: 100%
+		float: none
+		text-align: center
+
+		li
+			padding: 10px 20px
+			background-color: #337ab7
+			margin-bottom: 5px
+		a, a:hover, a:active, a:visited
+			color: white
+
+
+.menu
+	&--aside
+		list-style-type: none
+		font-size: 1em
+		font-weight: 600
+		padding-left: .5em
+		.menu__item
+			padding: 1rem
+
+		@media only screen and (max-width: 768px)
+			width: 100%
+
+
+
+
+

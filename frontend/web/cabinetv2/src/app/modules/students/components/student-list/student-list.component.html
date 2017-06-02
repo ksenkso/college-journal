@@ -1,0 +1,6 @@
+<ul *ngIf="students.length">
+  <li *ngFor="let student of students">
+    <h2>{{student.last_name}} {{student.first_name}} {{student.patronymic}}</h2>
+    <a [routerLink]="['edit', student.student_id]" class="btn">Изменить</a>
+  </li>
+</ul>

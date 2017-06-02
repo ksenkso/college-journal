@@ -1,0 +1,15 @@
+<div class="calendar">
+  <div class="calendar__controls">
+    <app-calendar-select [prop]="'month'"></app-calendar-select>
+    <app-calendar-select [prop]="'year'"></app-calendar-select>
+  </div>
+  <div class="calendar__view">
+    <div class="calendar__week">
+      <div class="calendar__weekday" *ngFor="let weekday of ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']">{{weekday}}</div>
+    </div>
+    <div class="calendar__days">
+      <app-calendar-offset></app-calendar-offset>
+      <app-calendar-day *ngFor="let day of days"></app-calendar-day>
+    </div>
+  </div>
+</div>

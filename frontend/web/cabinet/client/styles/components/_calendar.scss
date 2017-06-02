@@ -1,0 +1,110 @@
+.calendar {
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: $screen-lg-min) {
+    flex-direction: column;
+  }
+  &__container {
+    flex: 1;
+  }
+  &__controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    > div {
+      padding: 1rem;
+      font-weight: bold;
+      &:last-child {
+        color: #ff533a;
+      }
+    }
+  }
+  &__select {
+    display: flex;
+    .select {
+      &__control {
+        display: block;
+        //@include size(20px);
+        cursor: pointer;
+
+      }
+    }
+  }
+  &__view {
+
+    overflow: hidden;
+    height: 480px;
+   .view__container {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 100%;
+     @include u_transition;
+   }
+  }
+  &__mock {
+    width: calc(100% / 7);
+    height: 80px;
+  }
+  &__date {
+    height: 80px;
+    width: calc(100% / 7);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    @include u_transition;
+    &.selected {
+      background-color: $brand-primary;
+      color: #fff;
+    }
+
+  }
+  &__modal {
+    flex: 0 0 350px;
+    padding: 1rem;
+  }
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $table-border-color;
+  margin-bottom: 1rem;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__description {
+    padding-top: 1rem;
+    display: none;
+  }
+
+  &__caption {
+    font-weight: bold;
+  }
+
+  &__header {
+    cursor: pointer;
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__type {
+    margin-left: 1rem;
+  }
+
+  .glyphicon {
+    cursor: pointer;
+    margin: .5rem;
+  }
+}

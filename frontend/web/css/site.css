@@ -1,0 +1,164 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    left: auto ;
+    right: 0;
+}
+
+span.notification-counter {
+    background-color: #FF9800;
+    font-size: .6em;
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    right: -20%;
+    top: -20%;
+    z-index: 99999;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.table-hours {
+    table-layout: fixed;
+}
+
+.table-hours thead > tr {
+    height: 3.5em;
+}
+
+.table-hours th {
+    width: 95px;
+    white-space: pre;
+}
+
+.table-hours thead td {
+    width: 1em;
+
+}
+.table-hours thead td:after {
+    content: attr(data-date);
+    transform: rotate(-90deg) translateX(-1em);
+    display: block;
+}
+
+.table-hours td.hover {
+    background-color: #f5f5f5;
+}
+
+.table-hours__total:after {
+    content: 'Всего' !important;
+    transform: rotate(-90deg) translate(-15%, -25%);
+    display: block;
+}
+
+.table-hours td:last-child {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.overflow-x {
+
+    overflow: auto;
+
+}
+
+.table__switch {
+    display: flex;
+}
+
+.switch__months {
+    overflow: hidden;
+    width: 70px;
+    height: 1.6em;
+}
+
+.switch__arrow {
+    cursor: pointer;
+}
+
+.month-select {
+
+    position: relative;
+    overflow: hidden;
+}
+
+.month-select .month {
+    float: left;
+    width: 70px;
+    text-align: center;
+
+}
+
+.hours__msg {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: .4rem;
+}
+
+.js-make-good {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.js-students__item {
+    will-change: background-color, border-left;
+    transition: background-color .1s ease-in-out, border-left .1s ease-in-out;
+    border-left: 4px solid transparent;
+}
+
+
+tbody td:not(:first-child) {
+    cursor: pointer;
+}
+
+.hours--good {
+    font-weight: bold;
+}

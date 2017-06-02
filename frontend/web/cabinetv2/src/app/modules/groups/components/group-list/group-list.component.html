@@ -1,0 +1,7 @@
+<ul class="groups__list">
+  <li class="groups__group" *ngFor="let group of groups">
+    <span>{{group.group_name}}</span>
+    <a [routerLink]="['edit', group.group_id]" class="btn">Изменить</a>
+    <button class="btn btn-danger" (click)="deleteGroup(group.group_id)">Удалить</button>
+  </li>
+</ul>

@@ -1,0 +1,13 @@
+.form {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  label {
+    margin-top: .5rem;
+  }
+  textarea {
+    resize: vertical;
+  }
+}

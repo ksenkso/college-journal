@@ -1,0 +1,17 @@
+<table class="table table-bordered table-responsive">
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.username}}</td>
+      <td>{{user.last_name}} {{user.first_name}} {{user.patronymic}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.status}}</td>
+      <td>{{user.created_at}}</td>
+      <td>{{user.updated_at}}</td>
+      <td>
+        <a [routerLink]="['edit', user.id]">Изменить</a>
+        <button class="btn" (click)="deleteUser(user.id)">Удалить</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

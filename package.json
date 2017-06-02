@@ -1,0 +1,27 @@
+{
+  "name": "journal",
+  "version": "1.0.0",
+  "description": "Yii 2 Advanced Project Template ===============================",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenkso/journal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksenkso/journal/issues"
+  },
+  "homepage": "https://github.com/ksenkso/journal#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "0.0.8",
+    "gulp-livereload": "^3.8.1"
+  }
+}

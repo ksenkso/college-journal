@@ -1,0 +1,21 @@
+.user-table {
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+  }
+  border: 1px solid $table-border-color;
+  tr, td {
+    border: 1px solid $table-border-color;
+  }
+  td {
+    padding: .5rem;
+  }
+
+  &__item {
+
+    .edit a {
+      display: block;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+}

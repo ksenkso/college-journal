@@ -1,0 +1,49 @@
+.dialog {
+  transform: translateX(-50%);
+  left: 50%;
+	background-color: #FFF;
+	padding: 1rem;
+	flex-direction: column;
+	margin: 0 auto;
+	position: absolute;
+	display: none;
+  z-index: 1;
+	@include shadow;
+	button {
+		border: none !important;
+		@include u_transition;
+		@extend .btn;
+		@extend .btn-primary;
+		text-transform: uppercase;
+		margin: 0 1rem;
+		&:hover {
+			border: none !important;	
+		}
+	}
+	
+
+	&__content {
+		margin: 1rem 0;
+	}
+
+	&__header {
+		font-weight: bold;
+		font-size: $font-size-h3;
+	}
+	.header__close-dialog {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		width: 20px;
+		height: 20px;
+		background-color: red;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

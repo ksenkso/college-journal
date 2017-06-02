@@ -1,0 +1,34 @@
+.app__menu {
+  z-index: 200;
+  background-color: #fff;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  transform: translateX(-100%);
+}
+
+.menu__items {
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+}
+
+.menu__item {
+  font-size:1.2em;
+  padding: .5rem;
+  display: block;
+  margin: 1rem 0;
+}
+.menu__item a {
+  display: block;
+}
+
+.menu__item:hover {
+  background-color: rgba(0, 0, 0, .12);
+
+}
+
+

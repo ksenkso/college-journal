@@ -1,0 +1,8 @@
+<nav [@visible]="visible" *ngIf="visible" class="app__menu">
+  <app-header></app-header>
+  <ul class="menu__items">
+    <li *ngFor="let item of menu" class="menu__item">
+      <a class="menu__link" (click)="toggle()" [routerLink]="item.path">{{item.title}}</a>
+    </li>
+  </ul>
+</nav>

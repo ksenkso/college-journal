@@ -1,0 +1,32 @@
+<form class="form form_students" [formGroup]="groupForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-group">
+    <label class="center-block">Название:
+      <input class="form-control" formControlName="group_name" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Аббревиатура:
+      <input class="form-control" formControlName="abbreviation" required>
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">Номер группы:
+      <input class="form-control" formControlName="group_number" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Год поступления:
+      <input class="form-control" formControlName="year" required>
+    </label>
+  </div>
+
+
+  <div style="margin-bottom: 1em">
+    <button type="submit"
+            [disabled]="!groupForm.valid" class="btn btn-success">Save</button> &nbsp;
+    <button type="reset" (click)="revert()"
+            [disabled]="groupForm.pristine" class="btn btn-danger">Revert</button>
+  </div>
+</form>
