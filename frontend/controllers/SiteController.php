@@ -97,7 +97,7 @@ class SiteController extends Controller
         $res = [];
         foreach ($students as $student)
         {
-            $model = Today::findOne(['id' => $student['id']]);
+            $model = Today::findOne(['student_id' => $student['id']]);
             $model->student_id = $student['id'];
             $model->hours = $student['hours'];
             $model->is_good = $student['is_good'];
@@ -164,7 +164,15 @@ class SiteController extends Controller
         $user = \Yii::$app->getUser();
         $groupId = \common\models\User::find()->select('group_id')->where(['id' => $user->id])->scalar();
         Yii::trace("TODAY::GID $groupId");
-        $currentHours = Today::find()->where(['group_id' => $groupId])->asArray()->all();
+        $currentHours = Today::find()
+                             ->where(['group_id' => $groupId])
+	                        ->andWhere([
+	                        	'<>',
+		                        'student_id',
+		                        $user->id
+	                        ])
+                             ->asArray()
+                             ->all();
 
         foreach ($currentHours as $key => $value) {
             //$hours = str_split($item['hours']);

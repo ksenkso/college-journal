@@ -26,7 +26,7 @@ $(() => {
             $students.each((i, elem) => {
                 let $elem = $(elem);
                 const sid = $elem.attr('data-id');
-                let data = window.state.students.find( e => e.id ==  sid);
+                let data = window.state.students.find( e => e.student_id ==  sid);
                 $elem.data('lesson-0', data.hours[0]);
                 $elem.data('lesson-1', data.hours[1]);
                 $elem.data('lesson-2', data.hours[2]);
@@ -47,7 +47,7 @@ $(() => {
         $students.each((i, elem) => {
             let $elem = $(elem);
             let id = +$elem.attr('data-id');
-            let student = window.state.students.find(e => e.id == id);
+            let student = window.state.students.find(e => e.student_id == id);
             const {is_good, hours} = student;
 
             $elem.data('lesson-0', hours[0]);
@@ -96,7 +96,7 @@ $(() => {
             let res = {};
             res.hours = student.hours.join('');
             res.is_good = student.is_good;
-            res.id = student.id;
+            res.id = student.student_id;
             return res;
         });
 
@@ -130,7 +130,7 @@ $(() => {
         let $elem = $(e.target).closest('.js-students__item');
         const currentLesson = $modal.data('lesson');
         const sid = $elem.attr('data-id');
-        const index = window.state.students.findIndex((e, i) => e.id == +sid);
+        const index = window.state.students.findIndex((e, i) => e.student_id == +sid);
         let hours = $elem.data(`lesson-${currentLesson}`);
 
         if ( hours != 2) {
@@ -139,7 +139,7 @@ $(() => {
 
             if ($elem.data(`lesson-good-${currentLesson}`) !== 0) {
                 $elem.data(`lesson-good-${currentLesson}`, hours);
-                window.state.students.find(s => +sid == s.id).hours_good[currentLesson] = hours;
+                window.state.students.find(s => +sid == s.student_id).hours_good[currentLesson] = hours;
             }
 
             $elem.css('background-color', hours == 1 ? '#ffc107' : '#f44336');
@@ -161,11 +161,11 @@ $(() => {
         if ($student.data('is-good')) {
             $student.data('is-good', false);
             $student.css('border-left', '4px solid transparent');
-            window.state.students.find(s => +$student.attr('data-id') == s.id).is_good = 0;
+            window.state.students.find(s => +$student.attr('data-id') == s.student_id).is_good = 0;
         } else {
             $student.data('is-good', true);
             $student.css('border-left', '4px solid #4aa967');
-            window.state.students.find(s => +$student.attr('data-id') == s.id).is_good = 1;
+            window.state.students.find(s => +$student.attr('data-id') == s.student_id).is_good = 1;
         }
         /*    $student.data(`lesson-good-${lesson}`, 0);
 
