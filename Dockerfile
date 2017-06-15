@@ -73,4 +73,4 @@ ADD run.sh /root/run.sh
 RUN chmod 700 /root/run.sh
 
 CMD ["/root/run.sh"]
-EXPOSE 80
+EXPOSE 8080
