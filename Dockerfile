@@ -50,6 +50,7 @@ RUN /usr/local/bin/composer create-project \
 
 COPY . /app
 
+
 # Configure nginx
 ADD default /etc/nginx/sites-available/default
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf && \

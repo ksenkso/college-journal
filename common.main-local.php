@@ -2,7 +2,7 @@
 $user = getenv('MYSQL_USER');
 $host = getenv('MYSQL_HOST') or 'localhost';
 $dbname = getenv('MYSQL_DBNAME') ? getenv('MYSQL_DBNAME') : 'u1470_journal';
-$pass = $host === 'localhost' ? '' : '812KKKlm102';
+$pass = $host === 'localhost' ? '' : getenv('MYSQL_PASSWORD');
 
 return [
     'components' => [
