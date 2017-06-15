@@ -1,5 +1,5 @@
 <?php
-
+$user = getenv('MYSQL_USER');
 $host = getenv('MYSQL_HOST') or 'localhost';
 $dbname = getenv('MYSQL_DBNAME') ? getenv('MYSQL_DBNAME') : 'u1470_journal';
 $pass = $host === 'localhost' ? '' : '812KKKlm102';
@@ -9,7 +9,7 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => "mysql:host=$host;dbname=$dbname",
-            'username' => 'root',
+            'username' => $user,
             'password' => $pass,
             'charset' => 'utf8',
         ],
